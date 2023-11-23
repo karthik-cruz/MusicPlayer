@@ -27,7 +27,7 @@ body{
   
 .wrapper{
   width: 380px;
-  padding: 25px 30px;
+  margin: 25px 30px;
   overflow: hidden;
   position: relative;
   border-radius: 15px;
@@ -56,12 +56,13 @@ body{
   color: var(--lightblack);
 }
 .img-area{
-  width: 90%;
+  width: 80%;
+  position: relative;
   margin: 25px auto 0 auto;
   height: 200px;
   overflow: hidden;
   border-radius: 35px;
-  box-shadow: 0px 6px 12px var(--lightbshadow);
+  box-shadow: 1px 1px 12px black;
 }
 .img-area img{
   width: 100%;
@@ -85,6 +86,7 @@ body{
 }
 .progress-area{
   height: 6px;
+  position: relative;
   width: 100%;
   border-radius: 50px;
   background: #f0f0f0;
@@ -99,7 +101,7 @@ body{
 }
 .progress-bar::before{
   content: "";
-  position: absolute;
+  position: relative;
   height: 12px;
   width: 12px;
   border-radius: 50%;
@@ -133,6 +135,7 @@ body{
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  position: relative;
 }
 .controls i:nth-child(2),
 .controls i:nth-child(4){
@@ -243,4 +246,16 @@ ul li.playing{
   pointer-events: none;
   color: green;
 
+}
+
+
+video{
+  width: 100%;
+  margin: 0 auto;
+  
+  height: 100vh; /* Adjust the height as needed */
+  overflow:hidden;
+  position: absolute;
+  object-fit: cover;
+  opacity: 0.7;
 }
